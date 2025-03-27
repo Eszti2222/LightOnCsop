@@ -32,10 +32,10 @@ export default class Jatekter{
             console.log(event.detail)
             if (this.#lampaLekapcsoltDB%2==0){
                 this.#lista[event.detail]="green";
-                 this.Info.megjelenit("yellow")
+                 this.info.megjelenit("yellow");
             }else{
                 this.#lista[event.detail]="yellow";
-                 this.Info.megjelenit("green")
+                 this.info.megjelenit("green");
             }
             this.#lampaLekapcsoltDB++
             this.szuloElem.innerHTML="yellow";
