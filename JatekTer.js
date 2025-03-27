@@ -23,7 +23,12 @@ export default class Jatekter{
     }
     #jatekIndit(){
         this.startButton.addEventListener("click",()=>{
-            this.init();
+            //this.init();
+            for (let index = 0; index < this.#lista.length; index++) {
+                let rand = Math.floor(Math.random() * 2);
+                this.#lista.empty();
+                this.#lista.append(rand);
+            }
         })
 
     }
