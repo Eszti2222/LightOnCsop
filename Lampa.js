@@ -22,7 +22,7 @@ export default class Lampa {
                         <p>${this.#szin}</p>
                     </div>
                     `;
-    this.szElem.insertAdjacentHTML("beforeend", html);
+    this.#szElem.insertAdjacentHTML("beforeend", html);
   }
 
   getSzin() {
