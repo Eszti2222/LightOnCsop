@@ -3,11 +3,27 @@
     text-align: center;
 }
 body{
-    width: 80%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
 }
+
 .lampa{
-    border: 1px solid lightgray;
-    border-radius: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ; 
+    gap: 10px; 
+    width: 200px; 
+    height: 100px; 
+
+}
+article{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+.lampa div{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
 }
