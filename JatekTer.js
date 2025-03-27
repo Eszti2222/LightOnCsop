@@ -32,4 +32,5 @@ export default class Jatekter{
             new Lampa(this.#lista[index],index,this.szuloElem)
         }
     }
+    
 }

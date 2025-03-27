@@ -4,6 +4,6 @@ export default class Info{
         this.szuloElem=szuloElem;
     }
     magjelenit(lampakszama){
-        this.szuloElem,innerHTML=lampakszama+"";
+        this.szuloElem.innerHTML=lampakszama+"";
     }
 }
