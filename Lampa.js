@@ -7,10 +7,10 @@ export default class Lampa {
     this.#szin = szin;
     this.#index = index;
     this.#szElem = szElem;
-    this.getSzin();
-    this.setMellette();
+    this.megjelenit();
+    this.kisLampa= document.querySelector(".kisLampa:last-child");
 
-    this.#szElem.addEventListener("click", () => {
+    this.kisLampa.addEventListener("click", () => {
       if (this.#szin === this.#index.#szin) {
         const e = new CustomEvent("kivalaszt", { detail: this.#index });
         window.dispatchEvent(e);
@@ -18,20 +18,11 @@ export default class Lampa {
     });
   }
   megjelenit() {
-    let html = `<div class="lampa">
-                        <p>${this.#szin}</p>
+    let html = `<div class="kisLampa" style="background-color:${this.#szin}">
                     </div>
                     `;
     this.#szElem.insertAdjacentHTML("beforeend", html);
   }
 
-  getSzin() {
-    return this.#szin;
-  }
-  setMellette(){
-    aktSzin=this.getSzin()
-    if(kivalaszt){
-        this.#index+= !aktSzin;
-    }
-  }
+
 }

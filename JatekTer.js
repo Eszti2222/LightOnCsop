@@ -7,18 +7,24 @@ export default class Jatekter{
     #lampaLekapcsoltDB=0;
 
     constructor(szuloElem){
-        let InfoPanel=document.querySelector("article")
-        this.Info=new Info(InfoPanel)
+        
         this.szuloElem=szuloElem;
-        this.#esemenykKezelo();
-        this.#megjelenit();
+        this.init();
+     
     }
-
-    constructor(startButton){
-        let InfoPanel=document.querySelector("aside")
-        this.Info=new Info(InfoPanel)
-        this.startButton=startButton;
+    init(){
+        this.infoPanel=document.querySelector(".info")
+        this.info=new Info(this.infoPanel)
+        this.startButton=document.querySelector(".gomb");
+        this.#lista= ["green","yellow","green","yellow","green","yellow","green","yellow","green"];
+        this.#megjelenit();
+        this.#esemenykKezelo();
         this.#jatekIndit();
+    }
+    #jatekIndit(){
+        this.startButton.addEventListener("click",()=>{
+            this.init();
+        })
 
     }
     #esemenykKezelo(){
@@ -42,7 +48,5 @@ export default class Jatekter{
             new Lampa(this.#lista[index],index,this.szuloElem)
         }
     }
-    #jatekIndit(){
 
-    }
 }

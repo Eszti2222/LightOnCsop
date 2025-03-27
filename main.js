@@ -1,4 +1,4 @@
-import JatekTer from "./JatekTer";
+import JatekTer from "./JatekTer.js";
 
 
 const jatekElem=document.querySelector(".lampa")
