@@ -1,4 +1,5 @@
 import Info from "./Info.js";
+import Lampa from "./Lampa.js";
 
 
 export default class Jatekter{

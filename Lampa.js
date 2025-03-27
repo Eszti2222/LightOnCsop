@@ -30,7 +30,7 @@ export default class Lampa {
   }
   setMellette(){
     aktSzin=this.getSzin()
-    if(kattintas){
+    if(kivalaszt){
         this.#index+= !aktSzin;
     }
   }
