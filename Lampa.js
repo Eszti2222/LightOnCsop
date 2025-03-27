@@ -11,14 +11,13 @@ export default class Lampa {
     this.kisLampa= document.querySelector(".kisLampa:last-child");
 
     this.kisLampa.addEventListener("click", () => {
-      if (this.#szin === this.#index.#szin) {
+
         const e = new CustomEvent("kivalaszt", { detail: this.#index });
         window.dispatchEvent(e);
-      }
     });
   }
   megjelenit() {
-    let html = `<div class="kisLampa" style="background-color:${this.#szin}">
+    let html = `<div class="kisLampa" style="background-color:${this.#szin===1?"green":"yellow"}">
                     </div>
                     `;
     this.#szElem.insertAdjacentHTML("beforeend", html);
