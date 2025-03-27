@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+    text-align: center;
+}
+body{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
